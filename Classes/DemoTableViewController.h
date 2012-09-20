@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PullRefreshTableViewController.h"
 
-@interface DemoTableViewController : PullRefreshTableViewController {
+@interface DemoTableViewController : PullRefreshTableViewController<UIWebViewDelegate> {
     NSMutableArray *items;
 }
 

@@ -63,6 +63,11 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  self.tableView = [[UITableView alloc]initWithFrame:self.view.bounds];
+  self.tableView.dataSource = self;
+  self.tableView.delegate = self;
+  [self.view addSubview:self.tableView];
+	
   [self addPullToRefreshHeader];
 }
 

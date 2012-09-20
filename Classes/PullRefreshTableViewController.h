@@ -30,7 +30,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PullRefreshTableViewController : UITableViewController {
+@interface PullRefreshTableViewController : UIViewController<UITableViewDataSource, UITableViewDelegate> {
     UIView *refreshHeaderView;
     UILabel *refreshLabel;
     UIImageView *refreshArrow;
@@ -49,6 +49,7 @@
 @property (nonatomic, copy) NSString *textPull;
 @property (nonatomic, copy) NSString *textRelease;
 @property (nonatomic, copy) NSString *textLoading;
+@property (nonatomic, assign) UITableView* tableView;
 
 - (void)setupStrings;
 - (void)addPullToRefreshHeader;
