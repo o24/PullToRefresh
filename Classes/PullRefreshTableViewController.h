@@ -49,7 +49,7 @@
 @property (nonatomic, copy) NSString *textPull;
 @property (nonatomic, copy) NSString *textRelease;
 @property (nonatomic, copy) NSString *textLoading;
-@property (nonatomic, assign) UITableView* tableView;
+@property (nonatomic, retain) UITableView* tableView;
 
 - (void)setupStrings;
 - (void)addPullToRefreshHeader;
