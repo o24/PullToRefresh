@@ -38,8 +38,9 @@
 @synthesize textPull, textRelease, textLoading, refreshHeaderView, refreshLabel, refreshArrow, refreshSpinner;
 
 - (id)initWithStyle:(UITableViewStyle)style {
-  self = [super initWithStyle:style];
-  if (self != nil) {
+  self = [super init];
+  //self = [super initWithStyle:style];
+    if (self != nil) {
     [self setupStrings];
   }
   return self;
