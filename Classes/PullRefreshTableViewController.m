@@ -73,15 +73,16 @@
 }
 
 - (void)setupStrings{
-  textPull = [[NSString alloc] initWithString:@"Pull down to refresh..."];
-  textRelease = [[NSString alloc] initWithString:@"Release to refresh..."];
-  textLoading = [[NSString alloc] initWithString:@"Loading..."];
+  textPull = [[NSString alloc] initWithString:@"引き下げて..."];
+  textRelease = [[NSString alloc] initWithString:@"離して更新..."];
+  textLoading = [[NSString alloc] initWithString:@"読込中..."];
 }
 
 - (void)addPullToRefreshHeader {
     refreshHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0 - REFRESH_HEADER_HEIGHT, 320, REFRESH_HEADER_HEIGHT)];
     refreshHeaderView.backgroundColor = [UIColor clearColor];
-
+    //refreshHeaderView.backgroundColor = [UIColor clearColor];
+    
     refreshLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, REFRESH_HEADER_HEIGHT)];
     refreshLabel.backgroundColor = [UIColor clearColor];
     refreshLabel.font = [UIFont boldSystemFontOfSize:12.0];
@@ -100,6 +101,7 @@
     [refreshHeaderView addSubview:refreshArrow];
     [refreshHeaderView addSubview:refreshSpinner];
     [self.tableView addSubview:refreshHeaderView];
+    //self.tableView.backgroundColor = [UIColor blackColor];
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
